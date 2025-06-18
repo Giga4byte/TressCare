@@ -1,0 +1,149 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <title>
+        Profile - TressCare
+        </title>
+
+        <script src="https://cdn.tailwindcss.com">
+        </script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+        
+        <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            }
+            h1 {
+            font-family: 'Marcellus', serif;
+            }
+        </style>
+    </head>
+    
+    <body class="bg-pink-300 min-h-screen flex flex-col">
+        <header class="flex justify-between items-center px-10 py-4">
+        <div class="text-[#7d3e6a] font-normal text-lg">
+            TressCare
+        </div>
+        <nav class="space-x-8 text-[#7d3e6a] text-sm font-normal">
+            <a class="hover:underline" href="hero.html">
+            Home
+            </a>
+            <a class="hover:underline" href="about.html">
+            About
+            </a>
+            <a class="hover:underline" href="profile.html">
+            Profile
+            </a>
+        </nav>
+        </header>
+
+        <main class="flex-grow px-10">
+        <h1 class="text-[#7d3e6a] text-4xl font-bold text-center mb-6 tracking-widest"> PROFILE </h1>
+        <form action="#" class="bg-[#7d3e6a] bg-opacity-90 rounded-lg p-6 max-w-5xl mx-auto space-y-6 relative" method="post">
+            <button class="absolute top-6 right-6 bg-pink-300 text-[#7d3e6a] text-xs tracking-widest rounded-md px-4 py-1" type="submit">
+            S A V E
+            </button>
+            <div>
+            <label class="block text-pink-300 text-xs mb-1 font-normal" for="name">
+            Name*
+            </label>
+            <input class="w-full rounded-sm border border-pink-300 bg-[#d1d5db] px-2 py-1 text-[#7d3e6a] text-sm" id="name" name="name" required="" type="text"/>
+            </div>
+            <div>
+            <label class="block text-pink-300 text-xs mb-1 font-normal" for="email">
+            E-mail*
+            </label>
+            <input class="w-full rounded-sm border border-pink-300 bg-[#d1d5db] px-2 py-1 text-[#7d3e6a] text-sm" id="email" name="email" required="" type="email"/>
+            </div>
+            <div>
+            <label class="block text-pink-300 text-xs mb-1 font-normal" for="phone">
+            Phone number
+            </label>
+            <input class="w-full rounded-sm border border-pink-300 bg-[#d1d5db] px-2 py-1 text-[#7d3e6a] text-sm" id="phone" name="phone" type="tel"/>
+            </div>
+            <div>
+            <label class="block text-pink-300 text-xs mb-1 font-normal">
+            Gender
+            </label>
+            <div class="flex flex-wrap gap-x-16 gap-y-2 text-pink-300 text-xs font-normal">
+            <label class="flex items-center gap-1">
+            <input name="gender" type="checkbox" value="male"/>
+            Male
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="gender" type="checkbox" value="female"/>
+            Female
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="gender" type="checkbox" value="other"/>
+            Other
+            </label>
+            </div>
+            </div>
+            <div>
+            <label class="block text-pink-300 text-xs mb-1 font-normal">
+            Age
+            </label>
+            <div class="flex flex-wrap gap-x-10 gap-y-2 text-pink-300 text-xs font-normal">
+            <label class="flex items-center gap-1">
+            <input name="age" type="checkbox" value="10-19"/>
+            10-19 yrs
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="age" type="checkbox" value="20-30"/>
+            20-30 yrs
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="age" type="checkbox" value="31-40"/>
+            31-40 yrs
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="age" type="checkbox" value="41-50"/>
+            41-50 yrs
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="age" type="checkbox" value="50+"/>
+            &gt;50 yrs
+            </label>
+            </div>
+            </div>
+            
+            <div>
+
+            <label class="block text-pink-300 text-xs mb-1 font-normal">
+            Avatar
+            </label>
+            <div class="flex gap-6 items-center">
+            <label class="flex items-center gap-1">
+            <input name="avatar" type="checkbox" value="avatar1"/>
+            <img alt="Avatar 1: cartoon character with dark skin and short curly hair wearing a yellow shirt" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/3658b449-f4c4-4bbd-bc05-fd0eddf45315.jpg" width="40"/>
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="avatar" type="checkbox" value="avatar2"/>
+            <img alt="Avatar 2: cartoon character with medium skin and hijab wearing a blue top" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/c22b2466-6177-4fcc-541a-948d317b5b64.jpg" width="40"/>
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="avatar" type="checkbox" value="avatar3"/>
+            <img alt="Avatar 3: cartoon character with light skin and short hair wearing green shirt" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/faa3b706-e957-4a49-adeb-d11634f4721b.jpg" width="40"/>
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="avatar" type="checkbox" value="avatar4"/>
+            <img alt="Avatar 4: cartoon character with dark skin and glasses wearing a blue shirt" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/a1d61170-7153-424b-e04b-5d7392dc7439.jpg" width="40"/>
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="avatar" type="checkbox" value="avatar5"/>
+            <img alt="Avatar 5: cartoon character with light skin and long red hair" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/816cbd56-1162-4daa-a2f2-0010a97eae10.jpg" width="40"/>
+            </label>
+            <label class="flex items-center gap-1">
+            <input name="avatar" type="checkbox" value="avatar6"/>
+            <img alt="Avatar 6: cartoon character with medium skin and VR headset" class="rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/b6d3253b-4268-45a6-dd3b-43fbe4f3b85d.jpg" width="40"/>
+            </label>
+            </div>
+
+            </div>
+        </form>
+        </main>
+    </body>
+</html>

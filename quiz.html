@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hair Diagnostic Quiz - TressCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1 {
+      font-family: 'Marcellus', serif;
+    }
+  </style>
+</head>
+<body class="bg-pink-300 min-h-screen flex flex-col">
+  <header class="flex justify-between items-center px-10 py-4">
+    <div class="text-[#7d3e6a] font-normal text-lg">TressCare</div>
+    <nav class="space-x-8 text-[#7d3e6a] text-sm font-normal">
+      <a href="hero.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="profile.html" class="hover:underline">Profile</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow px-6 md:px-10">
+    <h1 class="text-[#7d3e6a] text-4xl font-bold text-center mb-6 tracking-widest">HAIR DIAGNOSTIC QUIZ</h1>
+    <form class="bg-[#7d3e6a] bg-opacity-90 rounded-lg p-6 max-w-4xl mx-auto space-y-6 text-white text-sm" id="quizForm">
+      <!-- Question 1 -->
+      <div>
+        <p class="mb-2 font-semibold">1. What is your hair type?</p>
+        <label class="block text-pink-300"><input type="radio" name="type" value="straight" /> Straight</label>
+        <label class="block text-pink-300"><input type="radio" name="type" value="wavy" /> Wavy</label>
+        <label class="block text-pink-300"><input type="radio" name="type" value="curly" /> Curly</label>
+        <label class="block text-pink-300"><input type="radio" name="type" value="coily" /> Coily</label>
+      </div>
+
+      <!-- Question 2 -->
+      <div>
+        <p class="mb-2 font-semibold">2. What is your scalp condition?</p>
+        <label class="block text-pink-300"><input type="radio" name="scalp" value="dry" /> Dry</label>
+        <label class="block text-pink-300"><input type="radio" name="scalp" value="oily" /> Oily</label>
+        <label class="block text-pink-300"><input type="radio" name="scalp" value="balanced" /> Balanced</label>
+        <label class="block text-pink-300"><input type="radio" name="scalp" value="dandruff" /> Dandruff-prone</label>
+      </div>
+
+      <!-- Question 3 -->
+      <div>
+        <p class="mb-2 font-semibold">3. Do you experience hair fall?</p>
+        <label class="block text-pink-300"><input type="radio" name="fall" value="no" /> No</label>
+        <label class="block text-pink-300"><input type="radio" name="fall" value="mild" /> Mild</label>
+        <label class="block text-pink-300"><input type="radio" name="fall" value="severe" /> Severe</label>
+      </div>
+
+      <!-- Question 4 -->
+      <div>
+        <p class="mb-2 font-semibold">4. How would you describe your hair density?</p>
+        <label class="block text-pink-300"><input type="radio" name="density" value="thin" /> Thin</label>
+        <label class="block text-pink-300"><input type="radio" name="density" value="medium" /> Medium</label>
+        <label class="block text-pink-300"><input type="radio" name="density" value="thick" /> Thick</label>
+      </div>
+
+      <!-- Question 5 -->
+      <div>
+        <p class="mb-2 font-semibold">5. Do you experience scalp buildup or clogged follicles?</p>
+        <label class="block text-pink-300"><input type="radio" name="buildup" value="buildupY" /> Yes</label>
+        <label class="block text-pink-300"><input type="radio" name="buildup" value="buildupN" /> No</label>
+        <label class="block text-pink-300"><input type="radio" name="buildup" value="buildupNS" /> Not Sure</label>
+      </div>
+
+      <!-- Question 6 -->
+      <div>
+        <p class="mb-2 font-semibold">6. Have you chemically treated your hair in the last 6 months? (color, bleach, relaxers, keratin, etc.)</p>
+        <label class="block text-pink-300"><input type="radio" name="treated" value="chemY" /> Yes</label>
+        <label class="block text-pink-300"><input type="radio" name="treated" value="chemN" /> No</label>
+      </div>
+
+      <!-- Question 7 -->
+      <div>
+        <p class="mb-2 font-semibold">7. How often do you use heat styling tools (flat iron, curling wand, etc.)?</p>
+        <label class="block text-pink-300"><input type="radio" name="styling" value="daily" /> Daily</label>
+        <label class="block text-pink-300"><input type="radio" name="styling" value="weekly" /> Weekly</label>
+        <label class="block text-pink-300"><input type="radio" name="styling" value="occasionally" /> Occasionally</label>
+        <label class="block text-pink-300"><input type="radio" name="styling" value="never" /> Never</label>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center pt-4">
+        <button type="submit" class="bg-pink-300 text-[#7d3e6a] px-6 py-2 rounded-md text-xs tracking-widest font-semibold">
+          S U B M I T
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="bg-pink-300 text-[#7d3e6a] text-center py-2 text-xs font-normal">
+    TressCare © 2025
+  </footer>
+
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const quizData = {
+        type: form.type.value,
+        scalp: form.scalp.value,
+        fall: form.fall.value,
+        density: form.density.value,
+        buildup: form.buildup.value,
+        treated: form.treated.value,
+        styling: form.styling.value
+      };
+
+      // Create a summary message
+      const summary = `
+        Your Answers:
+        1. Hair Type: ${quizData.type}
+        2. Scalp Condition: ${quizData.scalp}
+        3. Hair Fall: ${quizData.fall}
+        4. Hair Density: ${quizData.density}
+        5. Scalp Buildup: ${quizData.buildup}
+        6. Chemically Treated: ${quizData.treated}
+        7. Heat Styling: ${quizData.styling}
+      `.trim();
+
+      alert(summary); // Show pop-up
+
+      // Save to localStorage and redirect
+      localStorage.setItem('quizData', JSON.stringify(quizData));
+      window.location.href = 'results.html';
+    });
+  </script>
+
+</body>
+</html>

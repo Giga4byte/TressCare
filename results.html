@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Hair Analysis - TressCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1 {
+      font-family: 'Marcellus', serif;
+    }
+  </style>
+</head>
+<body class="bg-pink-300 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-10 py-4">
+    <div class="text-[#7d3e6a] font-normal text-lg">TressCare</div>
+    <nav class="space-x-8 text-[#7d3e6a] text-sm font-normal">
+      <a href="hero.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="profile.html" class="hover:underline">Profile</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow px-6 md:px-10">
+    <h1 class="text-[#7d3e6a] text-4xl font-bold text-center mb-6 tracking-widest">YOUR RESULTS</h1>
+    <div id="resultContent" class="bg-[#7d3e6a] bg-opacity-90 rounded-lg p-6 max-w-3xl mx-auto text-white text-sm space-y-4">
+      <!-- JS will populate this -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-pink-300 text-[#7d3e6a] text-center py-2 text-xs font-normal">
+    TressCare © 2025
+  </footer>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const data = localStorage.getItem('quizData');
+      const container = document.getElementById('resultContent');
+
+      if (!data) {
+        container.innerHTML = "<p>No quiz data found. Please take the quiz first.</p>";
+        return;
+      }
+
+      const quiz = JSON.parse(data);
+
+      container.innerHTML = `
+        <p><strong>Hair Type:</strong> ${quiz.type}</p>
+        <p><strong>Scalp Condition:</strong> ${quiz.scalp}</p>
+        <p><strong>Hair Fall:</strong> ${quiz.fall}</p>
+        <p><strong>Hair Density:</strong> ${quiz.density}</p>
+        <p><strong>Scalp Buildup:</strong> ${quiz.buildup}</p>
+        <p><strong>Chemically Treated:</strong> ${quiz.treated}</p>
+        <p><strong>Heat Styling:</strong> ${quiz.styling}</p>
+      `;
+    });
+  </script>
+</body>
+</html>
